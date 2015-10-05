@@ -1,25 +1,124 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Text2Speech" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
-                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                        <viewControllerLayoutGuide type="top" id="8dh-fD-rju"/>
+                        <viewControllerLayoutGuide type="bottom" id="sMp-D0-C1L"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="E8y-1Z-phQ">
+                                <rect key="frame" x="272" y="502" width="56" height="30"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Tell Me About SHP">
+                                    <color key="titleColor" red="0.0" green="0.50196081400000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="textToSpeech:" destination="BYZ-38-t0r" eventType="touchUpInside" id="xae-cS-o6z"/>
+                                </connections>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Xwz-aC-LZh">
+                                <rect key="frame" x="44" y="51" width="512" height="422"/>
+                                <animations/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="16"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Seton Hall Preparatory School Profile" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s81-Im-uiH">
+                                <rect key="frame" x="-42" y="-21" width="42" height="21"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
+                                <color key="textColor" red="0.0" green="0.50196081400000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="SetonHallPrep_Emblem" translatesAutoresizingMaskIntoConstraints="NO" id="cwV-oq-B4X">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <animations/>
+                            </imageView>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="Xwz-aC-LZh" firstAttribute="top" secondItem="cwV-oq-B4X" secondAttribute="bottom" id="1qT-1n-Mtd">
+                                <variation key="heightClass=regular-widthClass=compact" constant="8"/>
+                            </constraint>
+                            <constraint firstItem="cwV-oq-B4X" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="140" id="3U2-K7-5JR">
+                                <variation key="heightClass=regular-widthClass=compact" constant="147"/>
+                            </constraint>
+                            <constraint firstAttribute="trailingMargin" secondItem="s81-Im-uiH" secondAttribute="trailing" constant="24" id="A0B-yX-28V">
+                                <variation key="heightClass=regular-widthClass=compact" constant="0.0"/>
+                            </constraint>
+                            <constraint firstItem="Xwz-aC-LZh" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="24" id="BEy-L5-Ds8"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="cwV-oq-B4X" secondAttribute="trailing" constant="140" id="CTb-uh-Y5D">
+                                <variation key="heightClass=regular-widthClass=compact" constant="146"/>
+                            </constraint>
+                            <constraint firstItem="Xwz-aC-LZh" firstAttribute="top" secondItem="8dh-fD-rju" secondAttribute="bottom" constant="31" id="LeR-QA-5Wi">
+                                <variation key="heightClass=regular-widthClass=compact" constant="143"/>
+                            </constraint>
+                            <constraint firstItem="E8y-1Z-phQ" firstAttribute="top" secondItem="Xwz-aC-LZh" secondAttribute="bottom" constant="29" id="Rco-wY-zCV"/>
+                            <constraint firstItem="E8y-1Z-phQ" firstAttribute="centerX" secondItem="Xwz-aC-LZh" secondAttribute="centerX" id="Wwx-eq-luM"/>
+                            <constraint firstItem="s81-Im-uiH" firstAttribute="top" secondItem="8dh-fD-rju" secondAttribute="bottom" constant="39" id="bkS-hi-w1f"/>
+                            <constraint firstItem="cwV-oq-B4X" firstAttribute="top" secondItem="8dh-fD-rju" secondAttribute="bottom" constant="63" id="di4-yf-weO">
+                                <variation key="heightClass=regular-widthClass=compact" constant="68"/>
+                            </constraint>
+                            <constraint firstItem="sMp-D0-C1L" firstAttribute="top" secondItem="E8y-1Z-phQ" secondAttribute="bottom" constant="68" id="h0T-a9-AVt"/>
+                            <constraint firstItem="E8y-1Z-phQ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="nZ6-eX-RMn"/>
+                            <constraint firstItem="s81-Im-uiH" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="24" id="pxe-ja-7u0">
+                                <variation key="heightClass=regular-widthClass=compact" constant="0.0"/>
+                            </constraint>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="s81-Im-uiH"/>
+                                <exclude reference="cwV-oq-B4X"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="A0B-yX-28V"/>
+                                <exclude reference="bkS-hi-w1f"/>
+                                <exclude reference="pxe-ja-7u0"/>
+                                <exclude reference="1qT-1n-Mtd"/>
+                                <exclude reference="3U2-K7-5JR"/>
+                                <exclude reference="CTb-uh-Y5D"/>
+                                <exclude reference="di4-yf-weO"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular-widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="s81-Im-uiH"/>
+                                <include reference="cwV-oq-B4X"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="A0B-yX-28V"/>
+                                <include reference="bkS-hi-w1f"/>
+                                <include reference="pxe-ja-7u0"/>
+                                <include reference="1qT-1n-Mtd"/>
+                                <include reference="3U2-K7-5JR"/>
+                                <include reference="CTb-uh-Y5D"/>
+                                <include reference="di4-yf-weO"/>
+                            </mask>
+                        </variation>
                     </view>
+                    <connections>
+                        <outlet property="textView" destination="Xwz-aC-LZh" id="vhW-va-EnV"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="303" y="428.25"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="SetonHallPrep_Emblem" width="83" height="83"/>
+    </resources>
 </document>
